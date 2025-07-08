@@ -1,0 +1,37 @@
+# Core web and UI
+streamlit
+flask
+
+# PDF, DOCX, Excel processing
+PyMuPDF
+python-docx
+pandas
+openpyxl
+PyPDF2
+pdf2image
+pillow
+
+# OCR and table parsing
+pytesseract
+camelot-py[cv]
+opencv-python
+
+# Tokenization and embeddings
+tiktoken
+openai
+langchain
+
+# Vector database
+faiss-cpu
+
+# Database (SQL Server)
+pyodbc
+sqlalchemy
+
+# File storage (optional MinIO)
+minio
+
+# Misc
+uuid
+langdetect
+python-dotenv

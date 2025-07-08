@@ -1,0 +1,25 @@
+# Use official Python image
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system packages (Tesseract, poppler for PDF, libGL for cv2, etc.)
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    poppler-utils \
+    tesseract-ocr \
+    libgl1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy project code into container
+COPY . .
+
+# Install Python dependencies
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Streamlit should be accessible from outside the container
+ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
+
+# Default command: run the Streamlit frontend
+CMD ["streamlit", "run", "frontend/streamlit_app.py", "--server.port=8501"]
