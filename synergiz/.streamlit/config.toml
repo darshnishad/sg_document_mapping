@@ -1,0 +1,20 @@
+[server]
+fileWatcherType = "none"
+runOnSave = false
+maxUploadSize = 102800
+enableCORS = false
+enableXsrfProtection = false
+
+[runner]
+magicEnabled = false
+installTracer = false
+fixMatplotlib = false
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[global]
+showWarningOnDirectExecution = false
+suppressDeprecationWarnings = true
+minCachedMessageSize = 0
